@@ -22,14 +22,14 @@ header {
   color: white;
 }
 .mv {
-  height: 800px;
+  height: 400px;
   background-color: rgb(180, 193, 204);
 }
 
 .contents {
   margin: 20px auto;
   width: 80%;
-  height: 300px;
+  height: 400px;
   background-color: rgb(181, 182, 194);
 }
 footer {

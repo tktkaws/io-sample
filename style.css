@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;  
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+header, footer, section {
+  display: grid;
+  place-items: center;
+}
+
+header {
+  background-color: rgb(31, 33, 34);
+  height: 200px;
+  color: white;
+}
+.mv {
+  height: 800px;
+  background-color: rgb(180, 193, 204);
+}
+
+.contents {
+  margin: 20px auto;
+  width: 80%;
+  height: 300px;
+  background-color: rgb(181, 182, 194);
+}
+footer {
+  background-color: rgb(31, 33, 34);
+  height: 400px;
+  color: white;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.btn {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.btn.active {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+.btn.absolute {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.btn-inner {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(226, 40, 40);
+  opacity: 0.7;
+  display: grid;
+}
+.btn-inner::before {
+  justify-self: center;
+  align-self: center;
+  margin-top: 15px;
+  content: '';
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-top: solid 2px;
+  border-right: solid 2px;
+  transform: rotate(90deg);
+  transform: rotate(315deg);
+  border-color: white;
+}

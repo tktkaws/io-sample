@@ -14,19 +14,14 @@ const mvOptions = {
 };
 
 const mvObserver = new IntersectionObserver(doWhenMvIntersect, mvOptions);
-
 mvObserver.observe(mv);
 
 function doWhenMvIntersect(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting ) {
-      // console.log('true');
       btn.classList.remove('active');
-      // console.log('remove active');
-
     } else {
       btn.classList.add('active');
-      // console.log('add active');
     }
   });
 }
@@ -39,7 +34,7 @@ const footer = document.getElementById('footer');
 
 const footerOptions = {
   root: null, 
-  rootMargin: "0px 0px -10% 0px",
+  rootMargin: "0px 0px 0px 0px",
   threshold: 0
 };
 
@@ -50,15 +45,9 @@ footerObserver.observe(footer);
 function doWhenFooterIntersect(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting ) {
-      // console.log('true');
       btn.classList.add('absolute');
-      // console.log('remove active');
-
     } else {
       btn.classList.remove('absolute');
-
-      
-      // console.log('add active');
     }
   });
 }
